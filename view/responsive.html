@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Layout Sample</title>
+  <style type="text/css">
+    * {
+      box-sizing: border-box;
+    }
+    
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+    }
+    
+    .wrapper {
+      display: grid;
+      width: 100%;
+      height: 100%;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      padding: 10px;
+    }
+    
+    .box {
+      background-color: #444;
+      color: #fff;
+      border-radius: 5px;
+      border: 2px solid black;
+      padding: 20px;
+    }
+    
+    @media (min-width: 550px) {
+      .wrapper {
+        grid-template-columns: 150px 3fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: 
+            "header header header"
+            "left  content right"
+            "footer footer footer";
+      }
+      .header{
+        grid-area: header;
+      }
+      .left{
+        grid-area: left;
+      }
+      .content{
+        overflow: auto;
+        grid-area: content;
+      }
+      .right{
+        grid-area: right;
+      }
+      .footer{
+        grid-area: footer;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="box header">header</div>
+    <div class="box left">left</div>
+    <div class="box content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati debitis nemo excepturi voluptatibus magnam fugit
+      officia, ut, dicta, animi inventore quidem aliquam adipisci vitae perspiciatis id autem maiores asperiores dolores!</div>
+    <div class="box right">right</div>
+    <div class="box footer">footer</div>
+  </div>
+</body>
+
+</html>

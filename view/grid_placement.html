@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>grid placement sample</title>
+  <style type="text/css">
+    body {
+      font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+    }
+    
+    h1 {
+      font-size: 150%;
+    }
+    
+    .wrapper {
+      display: grid;
+      grid-template-columns: 100px 100px 100px 100px;
+      grid-template-rows: 100px 100px 100px 100px;
+    }
+    
+    .box {
+      background-color: #444;
+      color: #fff;
+      border-radius: 5px;
+      border: 2px solid black;
+      font-size: 75%;
+    }
+    
+    .a{
+      grid-row: 3;
+      grid-column: 4;
+    }
+    
+    .b{
+      grid-area: 2 / 2 / 3 / 4;
+    }
+    
+    .c{
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+    .small{
+      font-size: 75%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>配置位置の指定</h1>
+  <hr/>
+  <div class="wrapper">
+    <div class="box a">A<br/>grid-row: 3;<br/>grid-column: 4;</div>
+    <div class="box b">B<br/>grid-area: 2/2/3/4</div>
+    <div class="box c">C<br/>
+      <p class="small">
+        grid-row-start: 1;<br/>grid-row-end: 2;<br/>
+        grid-column-start: 2;<br/>grid-column-end: 3;
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

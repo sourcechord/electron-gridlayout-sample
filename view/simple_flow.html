@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>simple flow layout</title>
+  <style type="text/css">
+    body {
+      font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+    }
+    
+    h1 {
+      font-size: 150%;
+    }
+    
+    .wrapper {
+      display: grid;
+      grid-template-columns: 100px 150px 100px;
+      grid-template-rows: auto auto;
+    }
+    
+    .box {
+      background-color: #444;
+      color: #fff;
+      border-radius: 5px;
+      border: 2px solid black;
+      padding: 20px;
+      font-size: 150%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>基本的なレイアウト</h1>
+  <hr/>
+  <div class="wrapper">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+    <div class="box">D</div>
+    <div class="box">E</div>
+  </div>
+</body>
+
+</html>

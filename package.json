@@ -1,0 +1,14 @@
+{
+  "name": "electron-gridlayout-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron-prebuilt": "^0.35.1"
+  }
+}
