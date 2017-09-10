@@ -9,6 +9,6 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "electron-prebuilt": "^0.35.1"
+    "electron": "^1.7.5"
   }
 }

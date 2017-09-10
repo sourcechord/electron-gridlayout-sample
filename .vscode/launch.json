@@ -5,18 +5,18 @@
 			"name": "Launch Electron App",
 			"type": "node",
 			"request": "launch",
-			"program": "main.js",
+			"program": "${workspaceRoot}\\main.js",
 			"stopOnEntry": false,
 			"args": [],
-			"cwd": ".",
-			"runtimeExecutable": "node_modules\\.bin\\electron.cmd",
+			"cwd": "${workspaceRoot}",
+			"runtimeExecutable": "${workspaceRoot}\\node_modules\\.bin\\electron.cmd",
 			"runtimeArgs": [
 				"--nolazy"
 			],
 			"env": {},
-			"externalConsole": false,
+			"console": "internalConsole",
 			"sourceMaps": false,
-			"outDir": null
+			"outFiles": []
 		},
 		{
 			"name": "Attach",

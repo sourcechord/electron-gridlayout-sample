@@ -2,7 +2,6 @@ const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 const Menu = electron.Menu;
-electron.crashReporter.start();
 
 // メインウィンドウの参照をグローバルに持っておく。
 var mainWindow = null;
@@ -32,7 +31,8 @@ var menu = Menu.buildFromTemplate([
   },
 ]);
 
-app.commandLine.appendSwitch("--enable-experimental-web-platform-features");
+// Electron 1.7系以降では↓は不要
+//app.commandLine.appendSwitch("--enable-experimental-web-platform-features");
 
 Menu.setApplicationMenu(menu);
 
